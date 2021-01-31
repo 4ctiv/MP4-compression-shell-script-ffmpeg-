@@ -2,6 +2,7 @@
 Small shell script to compress multiple (mp4) files using ffmpeg.
 
 **Input:**  *Video files (readable by ffmpeg) [$FILENAME]*
+
 **Output:** Video files as x265 \*.mp4 [compressed_$FILENAME]*
 
 **ffmpeg command**:  *ffmpeg -i \"\$FILENAME\" -vcodec libx265 -crf 28 comressed_\"\$FILENAME\"*
