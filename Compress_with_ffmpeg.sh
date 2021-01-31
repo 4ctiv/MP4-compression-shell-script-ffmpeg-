@@ -3,11 +3,11 @@ echo \$1 is $1
 if [ $1 = "-h" ]
 then
     echo "Help for compress_with_ffmpeg.sh"
-    echo "-----------------------------------------"
+    echo "--------------------------------------------------------------------------------------------------------------------------------------------------------"
     echo " Usage:     sh compress_with_ffmpeg [Option] [ARGS...]"
     echo " "
     echo " Option     Meaning"
-    echo "   -h       Displays this message"
+    echo "   -h       Displays this help message"
     echo " "
     echo " Example:   compress_with_ffmpeg \"nyan-cat_video.mp4\" \"other_random_video.mp4\" "
     echo " "
@@ -19,7 +19,11 @@ then
     echo "            Files can not be named \"-h\"  "
 else
     for FILENAME in "$@"; do
-        
+        echo " "
+        echo "--------------------------------------------------------------------------------------------------------------------------------------------------------"
+        echo "                                                      Start to compress $FILENAME"
+        echo "--------------------------------------------------------------------------------------------------------------------------------------------------------"
+        echo " "
         ffmpeg -i "$FILENAME" -vcodec libx265 -crf 28 comressed_"$FILENAME"
         NUM=$(($NUM + 1))
     done
@@ -30,7 +34,7 @@ then
     echo
 elif [ $NUM = '0' ]; then
     echo " "
-    echo "No Arguments, please use -h for help."
+    echo "No arguments, please use -h for help."
 else 
     echo " "
     echo "Done! Converted $NUM files."
