@@ -14,8 +14,10 @@ Options:
   -    -h      Display help dialogue     -
   ________________________________________
 
-ARGS...: Full Filename of to converting video. (Has to be in the same folder as the shell script)
-  e.g.: "nyan-cat_video.mp4"
+ARGS... :
+  ----------------------------------------
+  Full Filename of to converting video. (Has to be in the same folder as the shell script)
+    e.g.: "nyan-cat_video.mp4"
 
 
 Dependencies:
