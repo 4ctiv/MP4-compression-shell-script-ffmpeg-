@@ -12,9 +12,9 @@ Usage: sh Compress_with_ffmpeg.sh [Option] [ARGS...]
   
 Options:
   ----------------------------------------
-  -  Option    Meaning                   -
-  -    -h      Display help dialogue     -
-  ________________________________________
+   Option    Meaning                   
+     -h      Display help dialogue     
+
 
 ARGS... :
   ----------------------------------------
