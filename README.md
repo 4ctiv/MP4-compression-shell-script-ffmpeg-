@@ -6,8 +6,10 @@ Output: Video files as x265 \*.mp4 [compressed_$FILENAME]
 
 Used ffmpeg command:  ffmpeg -i \"\$FILENAME\" -vcodec libx265 -crf 28 comressed_\"\$FILENAME\"
 
-Usage: sh Compress_with_ffmpeg.sh [Option] [ARGS...]
+  ________________________________________
 
+Usage: sh Compress_with_ffmpeg.sh [Option] [ARGS...]
+  
 Options:
   ----------------------------------------
   -  Option    Meaning                   -
@@ -19,6 +21,7 @@ ARGS... :
   Full Filename of to converting video. (Has to be in the same folder as the shell script)
     e.g.: "nyan-cat_video.mp4"
 
-
+  ________________________________________
+  
 Dependencies:
   ffmpeg 4.2.4 (tested version)
