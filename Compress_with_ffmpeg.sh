@@ -24,7 +24,7 @@ else
         echo "                                                      Start to compress $FILENAME"
         echo "--------------------------------------------------------------------------------------------------------------------------------------------------------"
         echo " "
-        ffmpeg -i "$FILENAME" -vcodec libx265 -crf 28 compressed_"$FILENAME"
+        ffmpeg -i "$FILENAME" -map 0 -vcodec libx265 -crf 28 compressed_"$FILENAME"
         NUM=$(($NUM + 1))
     done
 fi
