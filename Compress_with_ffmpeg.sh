@@ -11,7 +11,7 @@ then
     echo " "
     echo " Example:   compress_with_ffmpeg \"nyan-cat_video.mp4\" \"other_random_video.mp4\" "
     echo " "
-    echo "ffmpeg cmd: ffmpeg -i \"\$FILENAME\" -vcodec libx265 -crf 28 comressed_\"\$FILENAME\""
+    echo "ffmpeg cmd: ffmpeg -i \"\$FILENAME\" -vcodec libx265 -crf 28 compressed_\"\$FILENAME\""
     echo " "
     echo " ARGS:      Arguments: Names of the to converting files."
     echo "            The files have to be in the same folder, as the script and need to have the filename + file-extention correctly stated."
@@ -24,7 +24,7 @@ else
         echo "                                                      Start to compress $FILENAME"
         echo "--------------------------------------------------------------------------------------------------------------------------------------------------------"
         echo " "
-        ffmpeg -i "$FILENAME" -vcodec libx265 -crf 28 comressed_"$FILENAME"
+        ffmpeg -i "$FILENAME" -vcodec libx265 -crf 28 compressed_"$FILENAME"
         NUM=$(($NUM + 1))
     done
 fi
