@@ -34,8 +34,13 @@ case "$1" in
             ffmpeg -i "$FILENAME" -map 0 -vcodec libx265 -crf 28 compressed_"$FILENAME"
             NUM=$($NUM + 1)
         done
-        echo
-        echo "Done! Converted $NUM files."
+        if [ "$NUM" = '0' ]; then
+            echo
+            echo "No arguments, please use -h for help."
+        else 
+            echo
+            echo "Done! Converted $NUM files."
+        fi
         ;;
     *)
         for FILENAME in "$@"; do
@@ -47,12 +52,12 @@ case "$1" in
             ffmpeg -i "$FILENAME" -map 0 -vcodec libx265 -crf 28 compressed_"$FILENAME"
             NUM=$($NUM + 1)
         done
-        echo
-        echo "Done! Converted $NUM files."
+        if [ "$NUM" = '0' ]; then
+            echo
+            echo "No arguments, please use -h for help."
+        else 
+            echo
+            echo "Done! Converted $NUM files."
+        fi
         ;;
 esac
-
-if [ "$NUM" = '0' ]; then
-    echo
-    echo "No arguments, please use -h for help."
-fi
