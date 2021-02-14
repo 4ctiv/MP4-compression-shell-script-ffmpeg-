@@ -7,18 +7,20 @@ case "$1" in
         echo "Help for compress_with_ffmpeg.sh"
         echo "-----------------------------------------------------------------------------------------------------------------------------------------------------"
         echo " Usage:     sh compress_with_ffmpeg [Option] [ARGS...]"
-        echo " "
-        echo " Option     Meaning"
-        echo "   -h       Displays this help message"
-        echo " "
-        echo " Example:   compress_with_ffmpeg \"nyan-cat_video.mp4\" \"other_random_video.mp4\" "
-        echo " "
-        echo "ffmpeg cmd: ffmpeg -i \"\$FILENAME\" -vcodec libx265 -crf 28 compressed_\"\$FILENAME\""
-        echo " "
+        echo
         echo " ARGS:      Arguments: Names of the to converting files."
         echo "            The files have to be in the same folder, as the script and need to have the filename + file-extention correctly stated."
         echo "            Watch out for spaces in filenames. You can either choose \" \ \" for spaces or put the filenames into doubble quotationmarks (see Example)."
         echo "            Files can not be named \"-h\"  "
+        echo 
+        echo " Option     Meaning"
+        echo "   -h       Displays this help message"
+        echo
+        echo " Example:   compress_with_ffmpeg \"nyan-cat_video.mp4\" \"other_random_video.mp4\" "
+        echo
+        echo "ffmpeg cmd: ffmpeg -i \"\$FILENAME\" -vcodec libx265 -crf 28 compressed_\"\$FILENAME\""
+        echo 
+
         ;;
     "-a")
         echo
@@ -49,9 +51,9 @@ case "$1" in
 esac
 
 if [ "$NUM" = '0' ]; then
-    echo " "
+    echo
     echo "No arguments, please use -h for help."
 else
-    echo " "
+    echo
     echo "Done! Converted $NUM files."
 fi
