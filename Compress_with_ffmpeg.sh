@@ -35,25 +35,22 @@ case "$1" in
             NUM=$($NUM + 1)
         done
         ;;
-    "")
-        ;;
     *)
-        for FILENAME in "$@"; do
-            echo 
-            echo "-----------------------------------------------------------------------------------------------------------------------------------------------------"
-            echo "                                                      Start to compress $FILENAME"
-            echo "-----------------------------------------------------------------------------------------------------------------------------------------------------"
-            echo 
-            ffmpeg -i "$FILENAME" -map 0 -vcodec libx265 -crf 28 compressed_"$FILENAME"
-            NUM=$($NUM + 1)
-        done
+        if [ "$NUM" = '0' ]; then
+            echo
+            echo "No arguments, please use -h for help."
+        else
+            for FILENAME in "$@"; do
+                echo 
+                echo "-----------------------------------------------------------------------------------------------------------------------------------------------------"
+                echo "                                                      Start to compress $FILENAME"
+                echo "-----------------------------------------------------------------------------------------------------------------------------------------------------"
+                echo 
+                ffmpeg -i "$FILENAME" -map 0 -vcodec libx265 -crf 28 compressed_"$FILENAME"
+                NUM=$($NUM + 1)
+            done
+            echo
+            echo "Done! Converted $NUM files."
+        fi
         ;;
 esac
-
-if [ "$NUM" = '0' ]; then
-    echo
-    echo "No arguments, please use -h for help."
-else
-    echo
-    echo "Done! Converted $NUM files."
-fi
