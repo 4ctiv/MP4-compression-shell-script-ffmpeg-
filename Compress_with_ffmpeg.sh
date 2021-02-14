@@ -1,6 +1,6 @@
 #!/bin/sh
 NUM=0
-echo \$1 is "$1"
+# echo \$1 is "$1" # used for testing
 case "$1" in
     "-h")
         echo
