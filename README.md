@@ -13,8 +13,10 @@ Usage: *sh Compress_with_ffmpeg.sh [Option] [ARGS...]*
   
 **Options:**
   ----------------------------------------
-   Option / Meaning                   
+   Option / Meaning               
+   
      *-h*   / Display help dialogue
+     
      *-a*   / Automaticly convertes all files in the same folder matching *.mp4
      
 **ARGS... :**
