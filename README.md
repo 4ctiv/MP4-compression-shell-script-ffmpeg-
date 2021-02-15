@@ -15,7 +15,7 @@ Usage: *sh Compress_with_ffmpeg.sh [Option] [ARGS...]*
   ----------------------------------------
    Option / Meaning                   
      *-h*   / Display help dialogue
-     *-a*   / Automaticly convertes all files in the same folder matching *.mp4 ('*' is a wildcard opperator)
+     *-a*   / Automaticly convertes all files in the same folder matching *.mp4
 
 
 **ARGS... :**
