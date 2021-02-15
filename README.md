@@ -13,7 +13,7 @@ Usage: *sh Compress_with_ffmpeg.sh [Option] [ARGS...]*
   
 **Options:**
   ----------------------------------------
-   Option / Meaning               
+   Option   / Meaning               
    
      *-h*   / Display help dialogue
      
