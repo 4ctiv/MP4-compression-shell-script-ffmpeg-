@@ -20,12 +20,12 @@ case "$1" in
         echo
         echo "ffmpeg cmd: ffmpeg -i \"\$FILENAME\" -vcodec libx265 -crf 28 compressed_\"\$FILENAME\""
         echo 
-
         ;;
     "-a")
         echo
         echo "Converting all *.mp4 files in current folder"
-        for FILENAME in *.mp4 ; do
+        FILELIST='ls *.mp4'
+        for FILENAME in $FILELIST ; do
             echo 
             echo "-----------------------------------------------------------------------------------------------------------------------------------------------------"
             echo "                                                      Start to compress $FILENAME"
@@ -34,14 +34,6 @@ case "$1" in
             ffmpeg -i "$FILENAME" -map 0 -vcodec libx265 -crf 28 compressed_"$FILENAME"
             NUM=$($NUM + 1)
         done
-        if [ "$NUM" = '0' ]; then
-            echo
-            echo "No arguments, please use -h for help."
-        else 
-            echo
-            echo "Done! Converted $NUM files."
-        fi
-        ;;
     *)
         for FILENAME in "$@"; do
             echo 
